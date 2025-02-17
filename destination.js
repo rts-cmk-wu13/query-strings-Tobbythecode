@@ -8,19 +8,33 @@ let mainElm = document.createElement("main")
 document.querySelector("#root").append(mainElm)
 
 fetch(`/data/${id}.json`)
-.then(response => response.json())
-.then(data => {
-    
-    let sectionElm = document.createElement("section")
+    .then(response => response.json())
+    .then(data => {
 
-sectionElm.innerHTML = `
+        let sectionElm = document.createElement("section")
 
-    <img src="${data.image}" alt="">
-    <h1>${data.title}</h1>
+        let facilitylist = data.facilities.map(facility => `<li>${facility}</li>`).join("");
+
+        sectionElm.innerHTML = `
+        <div class="grid">
+<figure>
+    <img class="imagetest" src="${data.image}" alt="">
+    </figure>
+    <div class="text">
     <h1>${data.destination}</h1>
-    <p>${data.subtitle}</p>
-  
+    <h1>${data.title}</h1>
+
+    <h3>${data.subtitle}</h3>
+    <p>${data.text}</p>
+    <section class="facilitylist">
+  <h3>facilities:</h3>
+  <ul>${facilitylist}</ul>
+  </section>
+  </div>
+  </div>
 `
 
-mainElm.append(sectionElm)
-})
+        mainElm.append(sectionElm)
+
+
+    })
