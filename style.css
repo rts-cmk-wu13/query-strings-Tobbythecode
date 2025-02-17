@@ -60,3 +60,9 @@ a{
 
     margin-right: 1.5rem;
 }
+
+
+.card__favoritebtn--selected{
+
+    background-color: red;
+}
