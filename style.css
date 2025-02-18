@@ -52,17 +52,30 @@ img{
 }
 
 .testagain, a{
-    padding-block: 1.5rem;
+display: flex;
+justify-content: space-around;
+padding-block: 0.5rem;
   
 }
 
 a{
-
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
     margin-right: 1.5rem;
+    color: black;
 }
 
 
 .card__favoritebtn--selected{
 
-    background-color: red;
+color: red;
+background-color: none;
+
 }
+
+
+
+
+
+
+

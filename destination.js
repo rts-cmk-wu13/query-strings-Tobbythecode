@@ -1,3 +1,7 @@
+
+
+
+
 let search = window.location.search
 let params = new URLSearchParams(search)
 console.log(params);
@@ -23,7 +27,7 @@ fetch(`/data/${id}.json`)
     <div class="text">
     <h1>${data.destination}</h1>
     <h1>${data.title}</h1>
-
+ 
     <h3>${data.subtitle}</h3>
     <p>${data.text}</p>
     <section class="facilitylist">
@@ -33,6 +37,12 @@ fetch(`/data/${id}.json`)
   </div>
   </div>
 `
+
+
+
+
+
+
 
         mainElm.append(sectionElm)
 
